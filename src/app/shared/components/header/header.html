@@ -1,8 +1,31 @@
-<header class="barra-ventana">
- <span class="titulo-sistema">Refugio de animales San Antón - Sistema de
-gestión</span>
- <nav class="menu-navegacion">
- <a routerLink="/home" routerLinkActive="activo">Inicio</a>
- <a routerLink="/login" routerLinkActive="activo">Acceso</a>
+<header class="cabecera">
+ <div class="cabecera__fila">
+ <a routerLink="/home" class="cabecera__marca">
+ <span class="cabecera__logo" aria-hidden="true"></span>
+ <span class="cabecera__titulo">Refugio El Cañaveral</span>
+ </a>
+ <input type="checkbox" id="cabecera-toggle"
+class="cabecera__toggle-input">
+ <label for="cabecera-toggle" class="cabecera__toggle-boton"
+aria-label="Abrir menú">
+ <span></span><span></span><span></span>
+ </label>
+ <nav class="cabecera__nav" aria-label="Navegación principal">
+ <details class="cabecera__submenu">
+ <summary class="cabecera__enlace">Adopta</summary>
+ <ul class="cabecera__submenu-lista">
+ <li><a class="cabecera__enlace-deshabilitado" ariadisabled="true" tabindex="-1">Perros</a></li>
+ <li><a class="cabecera__enlace-deshabilitado" ariadisabled="true" tabindex="-1">Gatos</a></li>
+ <li><a class="cabecera__enlace-deshabilitado" ariadisabled="true" tabindex="-1">Aves</a></li>
+ <li><a class="cabecera__enlace-deshabilitado" ariadisabled="true" tabindex="-1">Conejos</a></li>
+ </ul>
+ </details>
+ <a class="cabecera__enlace-deshabilitado" ariadisabled="true" tabindex="-1">Colabora</a>
+ <a class="cabecera__enlace-deshabilitado" ariadisabled="true" tabindex="-1">Tienda solidaria</a>
+ <a class="cabecera__enlace-deshabilitado" ariadisabled="true" tabindex="-1">Noticias</a>
+ <a routerLink="/login" routerLinkActive="cabecera__enlace--
+activo" class="cabecera__enlace cabecera__enlace--
+acceso">Acceso</a>
  </nav>
+ </div>
 </header>

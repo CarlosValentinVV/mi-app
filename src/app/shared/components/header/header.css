@@ -1,26 +1,147 @@
-.barra-ventana {
- background-color: #0055ea;
- color: #ffffff;
- padding: 6px 12px;
+.cabecera {
+ --color-texto: #232620;
+ --color-texto-suave: #6d6f68;
+ --color-fondo: #ffffff;
+ --color-borde: #e4e3df;
+ --color-acento: #3f5c4e;
+ --color-acento-suave: #eef1ee;
+ background-color: var(--color-fondo);
+ border-bottom: 1px solid var(--color-borde);
+ font-family: 'Segoe UI', system-ui, sans-serif;
+}
+.cabecera__fila {
  display: flex;
- justify-content: space-between;
  align-items: center;
- font-family: 'Segoe UI', Tahoma, sans-serif;
- border-bottom: 2px solid #002266;
+ justify-content: space-between;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 14px 24px;
+ position: relative;
 }
-.titulo-sistema {
- font-weight: bold;
- font-size: 13px;
-}
-.menu-navegacion a {
- color: #ffffff;
+.cabecera__marca {
+ display: flex;
+ align-items: center;
+ gap: 8px;
  text-decoration: none;
- font-size: 12px;
- margin-left: 10px;
- padding: 2px 8px;
- border: 1px solid transparent;
+ color: var(--color-texto);
 }
-.menu-navegacion a.activo, .menu-navegacion a:hover {
- background-color: #003399;
- border: 1px solid #ffffff;
+.cabecera__logo {
+ font-size: 18px;
+ line-height: 1;
+}
+.cabecera__titulo {
+ font-size: 16px;
+ font-weight: 600;
+ letter-spacing: -0.2px;
+}
+/* Navegación */
+.cabecera__nav {
+ display: flex;
+ align-items: center;
+ gap: 4px;
+}
+.cabecera__enlace,
+.cabecera__enlace-deshabilitado {
+ font-size: 14px;
+ padding: 8px 14px;
+ border-radius: 6px;
+ text-decoration: none;
+ cursor: pointer;
+ list-style: none;
+}
+.cabecera__enlace {
+ color: var(--color-texto);
+}
+.cabecera__enlace:hover {
+ background-color: var(--color-acento-suave);
+}
+.cabecera__enlace--activo {
+ background-color: var(--color-acento);
+ color: #ffffff;
+}
+.cabecera__enlace-deshabilitado {
+ color: var(--color-texto-suave);
+ opacity: 0.65;
+ cursor: not-allowed;
+ pointer-events: none;
+}
+/* Submenú "Adopta" (details/summary: funciona sin JavaScript,
+también táctil) */
+.cabecera__submenu {
+ position: relative;
+}
+.cabecera__submenu summary {
+ display: flex;
+ align-items: center;
+ gap: 4px;
+}
+.cabecera__submenu summary::-webkit-details-marker {
+ display: none;
+}
+.cabecera__submenu summary::after {
+ content: '▾';
+ font-size: 10px;
+ color: var(--color-texto-suave);
+}
+.cabecera__submenu-lista {
+ position: absolute;
+ top: calc(100% + 6px);
+ left: 0;
+ min-width: 160px;
+ background-color: var(--color-fondo);
+ border: 1px solid var(--color-borde);
+ border-radius: 8px;
+ padding: 6px;
+ margin: 0;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.cabecera__submenu-lista li {
+ list-style: none;
+}
+.cabecera__submenu-lista .cabecera__enlace-deshabilitado {
+ display: block;
+ padding: 8px 10px;
+}
+/* Botón hamburguesa (solo visible en móvil) */
+.cabecera__toggle-input {
+ display: none;
+}
+.cabecera__toggle-boton {
+ display: none;
+ flex-direction: column;
+ gap: 4px;
+ cursor: pointer;
+ padding: 6px;
+}
+.cabecera__toggle-boton span {
+ width: 20px;
+ height: 2px;
+ background-color: var(--color-texto);
+}
+@media (max-width: 720px) {
+ .cabecera__toggle-boton {
+ display: flex;
+ }
+ .cabecera__nav {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ flex-direction: column;
+ align-items: stretch;
+ background-color: var(--color-fondo);
+ border-top: 1px solid var(--color-borde);
+ padding: 8px;
+ }
+ .cabecera__toggle-input:checked ~ .cabecera__nav {
+ display: flex;
+ }
+ .cabecera__submenu-lista {
+ position: static;
+ box-shadow: none;
+ border: none;
+ padding-left: 12px;
+
+}
 }
