@@ -1,0 +1,26 @@
+.barra-ventana {
+ background-color: #0055ea;
+ color: #ffffff;
+ padding: 6px 12px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-family: 'Segoe UI', Tahoma, sans-serif;
+ border-bottom: 2px solid #002266;
+}
+.titulo-sistema {
+ font-weight: bold;
+ font-size: 13px;
+}
+.menu-navegacion a {
+ color: #ffffff;
+ text-decoration: none;
+ font-size: 12px;
+ margin-left: 10px;
+ padding: 2px 8px;
+ border: 1px solid transparent;
+}
+.menu-navegacion a.activo, .menu-navegacion a:hover {
+ background-color: #003399;
+ border: 1px solid #ffffff;
+}

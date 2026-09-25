@@ -1,0 +1,14 @@
+.barra-estado {
+ background-color: #ece9d8;
+ border-top: 1px solid #716f64;
+ padding: 4px 10px;
+ font-family: 'Segoe UI', Tahoma, sans-serif;
+ font-size: 11px;
+ color: #000000;
+ display: flex;
+ justify-content: space-between;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ box-sizing: border-box;
+}

@@ -1,0 +1,48 @@
+.ventana-login {
+ width: 300px;
+ margin: 60px auto;
+ background-color: #ece9d8;
+ border: 2px solid #000000;
+ font-family: 'Segoe UI', Tahoma, sans-serif;
+ box-shadow: 2px 2px 0px #ffffff inset, -2px -2px 0px #716f64 inset;
+}
+.cabecera-seccion {
+ background-color: #0055ea;
+ color: #ffffff;
+ padding: 4px 8px;
+ font-weight: bold;
+ font-size: 12px;
+}
+.contenido-seccion {
+ padding: 15px;
+}
+.fila-campo {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 10px;
+ font-size: 12px;
+}
+.fila-campo input {
+ border: 1px solid #716f64;
+ padding: 2px 4px;
+ width: 150px;
+ background-color: #ffffff;
+}
+.panel-botones {
+ display: flex;
+ justify-content: flex-end;
+ gap: 6px;
+ margin-top: 15px;
+}
+.boton-sistema {
+ background-color: #ece9d8;
+ border: 1px solid #000000;
+ padding: 3px 12px;
+ font-size: 11px;
+ cursor: pointer;
+ box-shadow: 1px 1px 0px #ffffff inset, -1px -1px 0px #716f64 inset;
+}
+.boton-sistema:active {
+ box-shadow: -1px -1px 0px #ffffff inset, 1px 1px 0px #716f64 inset;
+}

@@ -1,0 +1,37 @@
+.ventana {
+ background-color: #ece9d8;
+ border: 2px solid #000000;
+ margin: 20px;
+ font-family: 'Segoe UI', Tahoma, sans-serif;
+ box-shadow: 2px 2px 0px #ffffff inset, -2px -2px 0px #716f64 inset;
+}
+.cabecera-seccion {
+ background-color: #0055ea;
+ color: #ffffff;
+ padding: 4px 8px;
+ font-weight: bold;
+ font-size: 12px;
+}
+.contenido-seccion {
+ padding: 15px;
+}
+.texto-informativo {
+ font-size: 12px;
+ margin-bottom: 10px;
+}
+.tabla-datos {
+ width: 100%;
+ border-collapse: collapse;
+ background-color: #ffffff;
+ border: 1px solid #716f64;
+ font-size: 12px;
+}
+.tabla-datos th, .tabla-datos td {
+ border: 1px solid #d4d0c8;
+ padding: 5px 8px;
+ text-align: left;
+}
+.tabla-datos th {
+ background-color: #ece9d8;
+ font-weight: bold;
+}
