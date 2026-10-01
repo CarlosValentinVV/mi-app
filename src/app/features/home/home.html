@@ -1,36 +1,42 @@
-<div class="ventana">
- <div class="cabecera-seccion">Listado general de animales acogidos</div>
- <div class="contenido-seccion">
- <p class="texto-informativo">Registro de fichas disponibles en el refugio:</p>
- <table class="tabla-datos">
- <thead>
- <tr>
- <th>Código</th>
- <th>Nombre</th>
- <th>Especie</th>
- <th>Estado</th>
- </tr>
- </thead>
- <tbody>
- <tr>
- <td>001</td>
- <td>Roco</td>
- <td>Perro</td>
- <td>En adopción</td>
- </tr>
- <tr>
- <td>002</td>
- <td>Mimi</td>
- <td>Gato</td>
- <td>En acogida</td>
- </tr>
- <tr>
- <td>003</td>
- <td>Toby</td>
- <td>Perro</td>
- <td>En adopción</td>
- </tr>
- </tbody>
- </table>
+<main class="home">
+ <section class="home__hero">
+ <h1 class="home__hero-titulo">Encuentra a tu nuevo mejor
+amigo</h1>
+ <p class="home__hero-texto">Perros, gatos, aves y conejos
+esperando un hogar en el Refugio San Antón.</p>
+ <a class="home__hero-boton" aria-disabled="true"
+tabindex="-1">Ver animales en adopción</a>
+ </section>
+ <section class="home__destacados">
+ <h2 class="home__seccion-titulo">Animales destacados</h2>
+ <div class="home__tarjetas">
+ <article class="tarjeta-animal" *ngFor="let animal of
+animalesDestacados">
+ <div class="tarjeta-animal__foto"
+aria-hidden="true"></div>
+ <div class="tarjeta-animal__info">
+ <h3 class="tarjeta-animal__nombre">{{ animal.nombre }}
+</h3>
+ <p class="tarjeta-animal__detalle">{{ animal.especie }}
+· {{ animal.edad }}</p>
+ <a class="tarjeta-animal__boton" aria-disabled="true"
+tabindex="-1">Conóceme</a>
  </div>
-</div>
+ </article>
+ </div>
+ </section>
+ <section class="home__pasos">
+ <h2 class="home__seccion-titulo">Cómo adoptar</h2>
+ <ol class="home__lista-pasos">
+ <li><span class="home__paso-numero">1</span> Rellena el
+formulario de solicitud</li>
+ <li><span class="home__paso-numero">2</span> Entrevista con
+3
+el equipo del refugio</li>
+ <li><span class="home__paso-numero">3</span> Visita y conoce
+al animal</li>
+ <li><span class="home__paso-numero">4</span> ¡Bienvenido a
+casa!</li>
+ </ol>
+ </section>
+</main>

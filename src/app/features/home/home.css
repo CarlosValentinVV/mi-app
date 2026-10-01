@@ -1,37 +1,131 @@
-.ventana {
- background-color: #ece9d8;
- border: 2px solid #000000;
- margin: 20px;
- font-family: 'Segoe UI', Tahoma, sans-serif;
- box-shadow: 2px 2px 0px #ffffff inset, -2px -2px 0px #716f64 inset;
+.home {
+ --color-texto: #232620;
+ --color-texto-suave: #6d6f68;
+ --color-fondo: #ffffff;
+ --color-fondo-suave: #f6f8f6;
+ --color-borde: #e4e3df;
+ --color-acento: #3f5c4e;
+ --color-acento-suave: #eef1ee;
+ font-family: 'Segoe UI', system-ui, sans-serif;
+ color: var(--color-texto);
 }
-.cabecera-seccion {
- background-color: #0055ea;
+/* Hero */
+.home__hero {
+ background-color: var(--color-acento-suave);
+ text-align: center;
+ padding: 64px 24px;
+}
+.home__hero-titulo {
+ font-size: 28px;
+ font-weight: 700;
+ margin: 0 0 12px;
+}
+.home__hero-texto {
+ font-size: 15px;
+ color: var(--color-texto-suave);
+ max-width: 460px;
+ margin: 0 auto 24px;
+}
+.home__hero-boton {
+ display: inline-block;
+ background-color: var(--color-acento);
  color: #ffffff;
- padding: 4px 8px;
- font-weight: bold;
- font-size: 12px;
+ text-decoration: none;
+ font-size: 14px;
+ font-weight: 600;
+ padding: 12px 24px;
+ border-radius: 8px;
+ cursor: not-allowed;
+ pointer-events: none;
 }
-.contenido-seccion {
- padding: 15px;
+/* Secciones */
+.home__destacados,
+.home__pasos {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 48px 24px;
 }
-.texto-informativo {
- font-size: 12px;
- margin-bottom: 10px;
+.home__seccion-titulo {
+ font-size: 20px;
+ font-weight: 700;
+ margin: 0 0 24px;
 }
-.tabla-datos {
- width: 100%;
- border-collapse: collapse;
- background-color: #ffffff;
- border: 1px solid #716f64;
- font-size: 12px;
+/* Tarjetas de animales */
+.home__tarjetas {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+ gap: 20px;
 }
-.tabla-datos th, .tabla-datos td {
- border: 1px solid #d4d0c8;
- padding: 5px 8px;
- text-align: left;
+.tarjeta-animal {
+ border: 1px solid var(--color-borde);
+ border-radius: 12px;
+ overflow: hidden;
+ background-color: var(--color-fondo);
+ transition: box-shadow 0.15s ease;
 }
-.tabla-datos th {
- background-color: #ece9d8;
- font-weight: bold;
+.tarjeta-animal:hover {
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.tarjeta-animal__foto {
+ aspect-ratio: 4 / 3;
+ background-color: var(--color-fondo-suave);
+}
+.tarjeta-animal__info {
+ padding: 14px 16px;
+}
+.tarjeta-animal__nombre {
+ font-size: 15px;
+ font-weight: 600;
+ margin: 0 0 4px;
+}
+.tarjeta-animal__detalle {
+ font-size: 13px;
+ color: var(--color-texto-suave);
+ margin: 0 0 12px;
+}
+.tarjeta-animal__boton {
+ display: inline-block;
+ font-size: 13px;
+ font-weight: 600;
+ color: var(--color-acento);
+ text-decoration: none;
+ cursor: not-allowed;
+ pointer-events: none;
+}
+/* Pasos de adopción */
+.home__lista-pasos {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+ gap: 16px;
+}
+.home__lista-pasos li {
+ font-size: 14px;
+ color: var(--color-texto-suave);
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+}
+.home__paso-numero {
+ flex-shrink: 0;
+ width: 26px;
+ height: 26px;
+ border-radius: 50%;
+ background-color: var(--color-acento);
+ color: #ffffff;
+ font-size: 13px;
+ font-weight: 700;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+@media (max-width: 480px) {
+ .home__hero {
+ padding: 48px 16px;
+ }
+ .home__hero-titulo {
+ font-size: 22px;
+ }
 }

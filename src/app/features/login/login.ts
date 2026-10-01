@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+type ModoAcceso = 'login' | 'registro';
 @Component({
  selector: 'app-login',
  standalone: true,
- imports: [],
- templateUrl: './login.html',
- styleUrl: './login.css'
+ imports: [CommonModule],
+ templateUrl: './login.component.html',
+ styleUrl: './login.component.css'
 })
-export class Login {}
+export class LoginComponent {
+ modo: ModoAcceso = 'login';
+ cambiarModo(nuevoModo: ModoAcceso): void {
+ this.modo = nuevoModo;
+ }
+}
